@@ -51,13 +51,13 @@ def login_page(request):
         user = authenticate(request, username=username, password=password) 
         print(user)
         #print(request.user.is_authenticated)
-        if user is not None:
+          if user is not None:
             #print(request.user.is_authenticated)
             login(request, user)
             print("Login válido")
             # Redireciona para uma página de sucesso.
             return redirect("/")
-        else:
+         else:
             #Retorna uma mensagem de erro de 'invalid login'.
             print("Login inválido")
     return render(request, "auth/login.html", context)
