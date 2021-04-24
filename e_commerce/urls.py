@@ -4,6 +4,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+
+
 from .views import (home_page, 
                     about_page, 
                     contact_page, 
@@ -17,7 +19,7 @@ urlpatterns = [
     path('contact/', contact_page),
     path('login/', login_page),
     path('register/', register_page),
-    path('products/', include("products.urls")),
+    path('products/', include("products.urls", namespace="products")),
     path('admin/', admin.site.urls),
 ]
 
