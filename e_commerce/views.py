@@ -29,6 +29,7 @@ def contact_page(request):
         "title": "Página de contato",
         "content": "Bem-vindo a página de contato",
         "form": contact_form
+    
     }
     #if request.method == "POST":
        # print(request.POST)
